@@ -1,0 +1,67 @@
+plugins {
+    id 'com.android.application'
+    id 'org.jetbrains.kotlin.android'
+}
+
+android {
+    compileSdk 32
+
+    defaultConfig {
+        applicationId "com.a5k.moviereviews"
+        minSdk 26
+        targetSdk 32
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+    buildFeatures{
+        viewBinding true
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+}
+
+dependencies {
+
+    def COROUTINES_VER = "1.5.1"
+    def CORE_KTX_VER = "1.7.0"
+    def APPCOMPAT_VER = "1.4.1"
+    def GOOGLE_MATERIAL = "1.5.0"
+    def CONSTRAINTLAYOUT_VER = "2.1.3"
+    def LEGACY_SUPPORT_VER = "1.0.0"
+    def JUNIT_VER = "4.13.2"
+    def EXT_JUNIT_VER = "1.1.3"
+    def COIL_VER = "1.4.0"
+    def RETROFIT_VER = "2.9.0"
+    def RECYCLER_VER = "1.2.1"
+
+    implementation "io.coil-kt:coil:$COIL_VER"
+    implementation "io.coil-kt:coil-base:$COIL_VER"
+
+    implementation "com.squareup.retrofit2:retrofit:$RETROFIT_VER"
+    implementation "com.squareup.retrofit2:converter-gson:$RETROFIT_VER"
+    implementation "androidx.recyclerview:recyclerview:$RECYCLER_VER"
+
+    implementation ("org.jetbrains.kotlinx:kotlinx-coroutines-core:$COROUTINES_VER")
+    implementation ("org.jetbrains.kotlinx:kotlinx-coroutines-android:$COROUTINES_VER")
+
+    implementation "androidx.core:core-ktx:$CORE_KTX_VER"
+    implementation "androidx.appcompat:appcompat:$APPCOMPAT_VER"
+    implementation "com.google.android.material:material:$GOOGLE_MATERIAL"
+    implementation "androidx.constraintlayout:constraintlayout:$CONSTRAINTLAYOUT_VER"
+    implementation "androidx.legacy:legacy-support-v4:$LEGACY_SUPPORT_VER"
+    testImplementation "junit:junit:$JUNIT_VER"
+    androidTestImplementation "androidx.test.ext:junit:$EXT_JUNIT_VER"
+    }
