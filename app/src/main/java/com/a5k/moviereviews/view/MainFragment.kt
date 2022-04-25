@@ -54,6 +54,7 @@ class MainFragment : Fragment() {
             if (numberOfElements.minus(lastItemElement) <= 5 && isLoad) {
                 newPage()
             }
+
         }
         initLiveData()
     }

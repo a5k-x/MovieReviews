@@ -7,7 +7,7 @@ import retrofit2.converter.gson.GsonConverterFactory
 class RetrofitImp: RetrofitData{
 
     override suspend fun getDataModel(api: String, page: Int): DataModel? =
-       getService().getDataModel(page = page)
+       getService().getDataModel(apiKey = api,page = page)
 
     private fun getService():ApiService=retrofit().create(ApiService::class.java)
 

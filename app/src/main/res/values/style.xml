@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="ItemNameMoviesText">
+        <item name="android:layout_marginStart">20dp</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">20sp</item>
+        <item name="layout_constrainedWidth">true</item>
+        <item name="android:maxLines">1</item>
+    </style>
+    <style name="ItemDescriptionMoviesText">
+        <item name="android:layout_marginStart">20dp</item>
+        <item name="android:layout_marginTop">8dp</item>
+        <item name="android:ellipsize">end</item>
+        <item name="layout_constrainedWidth">true</item>
+        <item name="android:maxLines">3</item>
+    </style>
+
+</resources>
